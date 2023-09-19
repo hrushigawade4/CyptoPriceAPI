@@ -1,0 +1,92 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the heading */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Style the symbol input section */
+.symbol-input {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+#cryptoSymbol {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #0074cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0055a3;
+}
+
+/* Style the container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the crypto card */
+.crypto-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style the crypto name section */
+.crypto-name {
+    display: flex;
+    align-items: center;
+}
+
+.crypto-name h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style the crypto price section */
+.crypto-price p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Style the green price change */
+.crypto-price p.green {
+    color: #00cc00;
+}
+
+/* Style the red price change */
+.crypto-price p.red {
+    color: #ff0000;
+}

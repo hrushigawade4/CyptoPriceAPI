@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blockchain API</title>
+</head>
+<body>
+
+    <h1>Cryptocurrency Prices</h1>
+    <div class="symbol-input">
+        <form id="myForm" method="post" action="/getThePrice"> <!-- Moved the form tag to wrap the input and button -->
+            <input type="text" id="cryptoSymbol" placeholder="Enter Symbol (e.g. BTC-USD)" name="id"> <!-- name="id" for accessing req.body.id -->
+            <input class="button" type="submit" name="fchBTN" id="get" value="Fetch Price">
+        </form>
+    </div>
+    
+    <%if(locals.content){%>
+
+    <div class="container">
+        <div class="crypto-card">
+            <div class="crypto-name">
+                <h2>Symbol: <%= content.symbol%></h2>
+            </div>
+            <div class="crypto-price">
+                <p>Price: $<%= content.price_24h %></p>
+                <p>Volume: <%= content.volume_24h %></p>
+                <p>Last Trade Price: $<%= content.last_trade_price %></p>
+            </div>
+        </div>
+    </div>
+    <%}else{%>
+        <div class="container">
+            <div class="crypto-card">
+                <div class="crypto-name">
+                    <h2>Symbol: </h2>
+                </div>
+                <div class="crypto-price">
+                    <p>Price: $</p>
+                    <p>Volume: </p>
+                    <p>Last Trade Price: $</p>
+                </div>
+            </div>
+        </div>
+    <%}%>
+    
+    
+</body>
+</html>
